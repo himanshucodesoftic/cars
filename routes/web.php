@@ -31,4 +31,37 @@ Route::get('/page-login',function()
 
 
 
-Route::post('login/{id}', 'App\Http\Controllers\AdminController@userPostLogin');
+// Route::post('login/{id}', 'App\Http\Controllers\AdminController@userPostLogin');
+
+
+
+Route::get('dashboard',"App\Http\Controllers\DashboardController@dashboard");
+
+
+Route::get('changepasswords',"App\Http\Controllers\DashboardController@changepassword");
+
+Route::get('/admin/logout','App\Http\Controllers\AdminController@adminlogout');
+Route::post('/admin/adminlogin/check', "App\Http\Controllers\AdminController@adminlogin");
+
+Route::get('changepassword/{id}',"App\Http\Controllers\DashboardController@change_password_detail");
+Route::post('/changepasswordhere/{id}', "App\Http\Controllers\DashboardController@update_password");
+
+// Route::get('/changepassword',"App\Http\Controllers\DashboardController@change_id");
+
+//ADD CAR
+Route::get('/add_car' ,"App\Http\Controllers\DashboardController@AddCarHere");
+Route::post('/add_car', "App\Http\Controllers\DashboardController@createcars");
+
+//carlist
+
+
+Route::get('car_list',"App\Http\Controllers\DashboardController@carlist");
+
+
+
+Route::get('delete/{id}','App\Http\Controllers\DashboardController@destroy');
+
+Route::view('car_edit',"car_edit");
+Route::get('/car_edit/{id}',"App\Http\Controllers\DashboardController@edit_cars");
+
+Route::post('todo_update/{id}',"App\Http\Controllers\DashboardController@update_cars")->name('todo.update');
