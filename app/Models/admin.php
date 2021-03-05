@@ -11,6 +11,7 @@ class admin extends Model
 
     protected $fillable = [
         'adm_id',
+        'adm_pwd'
         
     ];
 }

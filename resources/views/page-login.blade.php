@@ -21,7 +21,6 @@
         <div class="logo">
             <h1>Admin Login</h1>
         </div>
-
         <div class="card-body">
             @if(Session::has('success'))
             <div class="alert alert-success">
@@ -31,10 +30,8 @@
                 @endphp
             </div>
             @endif
-
-           
             <div class="login-box">
-            <h1 style="color:red;">{{{session('msg')}}}</h1> 
+                <h1 style="color:red;">{{{session('msg')}}}</h1>
                 <form class="login-form" method="post" action="{{url('/admin/adminlogin/check')}}">
                     @csrf
                     <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
@@ -51,10 +48,8 @@
                         <div class="utility">
                             <div class="animated-checkbox">
                                 <label>
-
                                 </label>
                             </div>
-
                         </div>
                     </div>
                     <div class="form-group btn-container">
@@ -62,7 +57,6 @@
                             IN</button>
                     </div>
                 </form>
-
             </div>
     </section>
     <!-- Essential javascripts for application to work-->

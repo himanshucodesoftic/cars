@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta name="description"
-        content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <meta name="description" content="">
     <!-- Twitter meta-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:site" content="@pratikborsadiya">
-    <meta property="twitter:creator" content="@pratikborsadiya">
+    <meta property="twitter:card" content="">
+    <meta property="twitter:site" content="">
+    <meta property="twitter:creator" content="">
     <!-- Open Graph Meta-->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Vali Admin">
-    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
     <meta property="og:url" content="{{asset('http://pratikborsadiya.in/blog/vali-admin')}}">
     <meta property="og:image" content="{{asset('http://pratikborsadiya.in/blog/vali-admin/hero-social.png')}}">
-    <meta property="og:description"
-        content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <meta property="og:description" content="">
     <title>Red Auto Rent</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,12 +23,17 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
         href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css')}}">
-    <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
-    <link rel="stylesheet" type="text/css"
+     <link rel="stylesheet" type="text/css"
         href="{{asset('https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css')}}">
 
     <link rel="stylesheet" type="text/css"
         href="{{asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+
+
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css')}}">
+
+
 </head>
 
 <body class="app sidebar-mini">
@@ -71,6 +74,31 @@
                 $('#example').DataTable();
             });
         })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.delete_form').on('submit', function () {
+                if (confirm("Are you sure you want to delete it?")) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+
+    </script>
+
+
+
+
+
+    <script type="text/javascript" charset="utf8"
+        src="{{asset('http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js')}}"></script>
+    <script type="text/javascript" charset="utf8"
+        src="{{asset('http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js')}}"></script>
+    <script>
+
 
     </script>
 
