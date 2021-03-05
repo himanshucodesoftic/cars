@@ -10,8 +10,8 @@
                     <th>name</th>
                     <th>description</th>
                     <th>price</th>
-                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +32,8 @@
                     <th>name</th>
                     <th>car</th>
                     <th>price</th>
-                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </tfoot>
         </table>

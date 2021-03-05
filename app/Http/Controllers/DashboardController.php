@@ -115,30 +115,64 @@ class DashboardController extends Controller
  */
     public function update_cars(Request $request, $id)
     {
-        $res=new Car();
-        $res->name=$request->input('name');
-        $res->model=$request->input('model');
-        $res->price=$request->input('price');
+       
+        $name = $request->input('name');
+        $model = $request->input('model');
+        $price = $request->input('price');
+        $description = $request->input('description');
+        $image = $request->file('image');
+        
+        $sittingtype = $request->input('sittingtype');
+        $Gerabox = $request->input('GearBox');
+        $years = $request->input('years');
+        
 
-        $res->description=$request->input('description');
-        $res->image=$request->file('image');
-        $res->sittingtype=$request->input('sittingtype');
-        $res->Gerabox=$request->input('GearBox');
-
-        $res->year=$request->input('years');
         if($request->hasfile('image'))
         {
-        foreach($request->file('image') as $image)
+    foreach($request->file('image') as $image)
             {
-            $new=$image->getClientOriginalName();
-            $image->move(public_path().'/public/Images/',$new);
-            $data[]=$new;
-            }
+        $new=$image->getClientOriginalName();
+        $image->move(public_path().'/public/Images/',$new);
+        $data[]=$new;
+           }
         }
-         $res->save();
-         $request->session()->flash('msg','data submites');
+        DB::beginTransaction();
+        try {
+            DB::table('cars')->where('id', $id)->update([
+                'name' => $name,
+                'model' => $model,
+                'description' => $description,
+                'image' => $image,
+                'price' => $price,
+                'sittingtype' => $sittingtype,
+                'Gerabox' => $Gerabox,
+                'year' => $years,
+            ]);
+            DB::commit();
+            return \redirect('/car_list');
+        } catch (\Exception $ex) {
+            DB::rollback();
+            dd($ex);
+            return \redirect('/error-page');
+        }
 
-        return redirect('/car_list');  
+
+        // $res=new Car();
+        // $res->name=$request->input('name');
+        // $res->model=$request->input('model');
+        // $res->price=$request->input('price');
+
+        // $res->description=$request->input('description');
+        // $res->image=$request->file('image');
+        // $res->sittingtype=$request->input('sittingtype');
+        // $res->Gerabox=$request->input('GearBox');
+
+        // $res->year=$request->input('years');
+       
+        //  $res->save();
+        //  $request->session()->flash('msg','data submites');
+
+        // return redirect('/car_list');  
     }
 
 

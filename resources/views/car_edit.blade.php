@@ -68,7 +68,7 @@
                                 <div class="form-group col-lg-6">
                                     <label for="name"><b>Image</b></label>
                                     <br>
-                                    <input type="file" name="image" class="form-control"
+                                    <input type="file" name="image[]" class="form-control"
                                         data-file_types="jpg|jpeg|gif|png" accept="image/png, image/jpeg"
                                         value="{{$todoArr->image}}" multiple>
                                     <input type="hidden" name="old_image" value="">
