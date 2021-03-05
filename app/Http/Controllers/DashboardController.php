@@ -65,7 +65,7 @@ class DashboardController extends Controller
             'image' => $image,
             'price' => $price,
             'sittingtype' => $sittingtype,
-            'Gerabox' => $Gerabox,
+            'Gearbox' => $Gerabox,
             'year' => $year,
 
         ]);
@@ -145,7 +145,7 @@ class DashboardController extends Controller
                 'image' => $image,
                 'price' => $price,
                 'sittingtype' => $sittingtype,
-                'Gerabox' => $Gerabox,
+                'Gearbox' => $Gerabox,
                 'year' => $years,
             ]);
             DB::commit();

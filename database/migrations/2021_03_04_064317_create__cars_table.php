@@ -22,7 +22,7 @@ class CreateCarsTable extends Migration
             
             $table->string('price');
             $table->string('sittingtype');
-            $table->string('Gerabox');
+            $table->string('Gearbox');
             $table->string('year');
             
            
