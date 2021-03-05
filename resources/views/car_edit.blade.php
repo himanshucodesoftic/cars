@@ -102,7 +102,20 @@
 
 
                                 </div>
+
                                 <div class="form-group col-lg-6">
+                                    <div class="form-group col-lg-6">
+                                        <label for="name"><b>Curent Image</b></label>
+                                        <br>
+                                        {{-- <input type="text" class="form-cntrl-file" name="image" id="image"  value="{{$jp_obj['p_image']}}" > --}}
+                                        <img src="{{$todoArr->image}}" class="form-cntrl-file" name="" height="70px;" alt="">
+                                        <input type="hidden" name="old_image" value="{{$todoArr->image}}" >
+                                        <div class="validate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-lg-12">
                                     <label for="name"><b>years</b></label>
                                     <input type="text" name="years" class="form-control" id="years" placeholder="years"
                                         style="width:100%;" value="{{$todoArr->year}}" required />
@@ -111,7 +124,9 @@
 
 
                                 </div>
+                            </div>
 
+                
 
 
 

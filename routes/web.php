@@ -65,3 +65,4 @@ Route::view('car_edit',"car_edit");
 Route::get('/car_edit/{id}',"App\Http\Controllers\DashboardController@edit_cars");
 
 Route::post('todo_update/{id}',"App\Http\Controllers\DashboardController@update_cars")->name('todo.update');
+
