@@ -59,7 +59,7 @@
                                 <div class="form-group col-lg-6">
                                     <label for="name"><b>GearBox</b></label>
                                     <input type="text" name="GearBox" class="form-control" id="name"
-                                        placeholder="GearBox" style="width:100%;" value="{{$todoArr->Gerabox}}"
+                                        placeholder="GearBox" style="width:100%;" value="{{$todoArr->Gearbox}}"
                                         required />
                                     <div class="validate"></div>
                                 </div>
