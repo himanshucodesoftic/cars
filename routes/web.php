@@ -81,3 +81,5 @@ Route::get('index',"App\Http\Controllers\HomeController@indexshow");
 // echo "message has been sent succesfuly";
 
 // });
+
+Route::view("thankyou","thankyou");

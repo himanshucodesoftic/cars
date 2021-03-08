@@ -33,12 +33,12 @@
     </div>
     <div class="flex items-center justify-center lg:w-1/2">
       <div class="">
-        <img class="object-cover" src="{{asset('../main/assets/img/cars.png')}}" alt="" />
+        <img class="object-cover" src="{{asset('assets/img/cars.png')}}" alt="" />
       </div>
     </div>
   </div>
   <a
-    href="/"
+    href=""
     aria-label="Scroll down"
     class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
   >
