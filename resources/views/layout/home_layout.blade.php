@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang={{app()->getLocale()}}>
   <title>Red Auto Rent</title>
+  <link rel="shortcut icon" href="./assets/img/favicon" />
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,13 +38,15 @@
   display: none;
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
   </style>
 
   
   </head>
 
- <body x-data="{ isOpen : false}">
+ <body x-data="{ isOpen : false}" class="bg-orange-100">
 
 @include('inc.home_header')
 

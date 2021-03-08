@@ -34,7 +34,7 @@
                         <li><a href="{{url('cars')}}" class="hover:text-orange-500">@lang('home.cars')</a></li>
                         <li><a href="{{url('AboutUs')}}" class="hover:text-orange-500">@lang('home.aboutus')</a></li>
                         <li><a href="{{url('contactus')}}" class="hover:text-orange-500">@lang('home.contactus')</a></li>
-                        <li><a href="{{url('BookRide')}}"  onclick="openModal('mymodaltop')" class="cta bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">@lang('home.Bookride')</a></li>
+                        <li><a href="#"  onclick="openModal('mymodaltop')" class="cta bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">@lang('home.Bookride')</a></li>
                         <li>
                           <div class="dropdown inline-block relative -mt-8">
                             <button class="button cta bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal inline-flex items-center">
