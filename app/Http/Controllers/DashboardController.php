@@ -79,7 +79,10 @@ class DashboardController extends Controller
        */
      
      public function carlist(Request $request )
-     {
+     {   if (!$request->session()->has('ssiapp_adm_id')) {
+        return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
+    } 
+         
        $sel_query = "SELECT * from cars";
         $res_query = DBraw::select($sel_query);
         $res_query = json_decode(json_encode($res_query), true);
@@ -105,7 +108,9 @@ class DashboardController extends Controller
      * 
      */
     public function edit_cars(Request $request,$id)
-     {
+     {   if (!$request->session()->has('ssiapp_adm_id')) {
+        return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
+    } 
       return view('car_edit')->with('todoArr',Car::find($id));
      }
 
@@ -156,23 +161,6 @@ class DashboardController extends Controller
             return \redirect('/error-page');
         }
 
-
-        // $res=new Car();
-        // $res->name=$request->input('name');
-        // $res->model=$request->input('model');
-        // $res->price=$request->input('price');
-
-        // $res->description=$request->input('description');
-        // $res->image=$request->file('image');
-        // $res->sittingtype=$request->input('sittingtype');
-        // $res->Gerabox=$request->input('GearBox');
-
-        // $res->year=$request->input('years');
-       
-        //  $res->save();
-        //  $request->session()->flash('msg','data submites');
-
-        // return redirect('/car_list');  
     }
 
 
@@ -192,7 +180,9 @@ class DashboardController extends Controller
  */
     
     public function change_password_detail(Request $request,$id)
-    {
+    {   if (!$request->session()->has('ssiapp_adm_id')) {
+        return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
+    } 
         try {
             $sel_query = "SELECT * from admins where admins.adm_id = " . $id;
             $res_query = DBraw::select($sel_query);
@@ -231,4 +221,28 @@ class DashboardController extends Controller
             return \redirect('/error-page');
         }
     }
+
+
+    public function bookrideslist(Request $request )
+    {    if (!$request->session()->has('ssiapp_adm_id')) {
+        return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
+    } 
+      $sel_query = "SELECT * from bookrides ORDER BY id DESC";
+       $res_query = DBraw::select($sel_query);
+       $res_query = json_decode(json_encode($res_query), true);
+       if (count($res_query)) {
+           foreach ($res_query as $res) {
+               $productlist[] = array(
+                   'id' => $res['id'],
+                   'name' => $res['name'],
+                   'email' => $res['email'],
+                   'image' => $res['image'],
+               );
+           }
+       } else {
+           $productlist = array();
+       }
+       return view('show_customer_rides', compact(['productlist']));
+   }
+
 }

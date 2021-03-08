@@ -16,7 +16,10 @@
                 <li><a class="treeview-item" href="{{url('add_car')}}"><i class="icon fa fa-circle-o"></i>Add your
                         car</a></li>
                 <li><a class="treeview-item" href="{{url('car_list')}}"><i class="icon fa fa-circle-o"></i>Car List</a>
+              
                 </li>
             </ul>
+            <li><a class="treeview-item" href="{{url('show_customer_rides')}}"><i class="icon fa fa-circle-o"></i>show customers ride</a>
+             
         </li>
 </aside>
