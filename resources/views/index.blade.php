@@ -202,7 +202,7 @@
                 <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
             </div>
-            <h6 class="font-semibold leading-5">            @lang('home.Efficient')</h6>
+            <h6 class="font-semibold leading-5">@lang('home.Efficient')</h6>
           </div>
           <p class="mb-2 text-sm text-gray-900">
             @lang('home.UnlikeothersourpriorityistoprovideHasselfreeandcosteffectiveservices.')
@@ -261,14 +261,14 @@
 <div class="row">
 <div class="col-md-3">
   <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-  @isset($productlist)
-  @foreach($productlist as $list)
+  @isset($new)
+  @foreach($new as $list)
     <a href="/" aria-label="View Item">
       <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-         <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{asset('image')}}" alt="" /> 
+         <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{asset($list['featureimage'])}}" alt="" /> 
         <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
           <p class="text-sm font-medium tracking-wide text-white">
-            <b> price:      {{ $list['price'] }}</b>
+            <b> price:{{ $list['price'] }}</b>
           </p>
         </div>
       </div>
@@ -316,7 +316,7 @@
     <div class="flex flex-col transition duration-300 bg-orange-100 rounded shadow-sm hover:shadow">
  
       <div class="relative w-full h-48">
-        <img src="{{asset('image')}}" class="object-cover w-full h-full rounded-t" alt="Plan" />
+        <img src="{{asset($list['image'])}}" class="object-cover w-full h-full rounded-t" alt="Plan" />
       </div>
       <div class="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
         <div>

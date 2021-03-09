@@ -47,15 +47,21 @@ class DashboardController extends Controller
         $sittingtype = $request->input('sittingtype');
         $Gerabox = $request->input('GearBox');
         $year = $request->input('years');
+
     if($request->hasfile('image'))
         {
     foreach($request->file('image') as $image)
             {
-        $new=$image->getClientOriginalName();
-        $image->move(public_path().'/public/Images/',$new);
-        $data[]=$new;
-           }
+                error_log("--->>" . $image->getClientOriginalExtension() . public_path() . $image->getClientOriginalName());
+                $src_file_logo = date('YmdHis') . $image->getClientOriginalName();
+                $dest_file_logo = public_path() . "/Images/";
+                $image->move(public_path() . "/Images/", $src_file_logo);
+                $image = "/Images/" . $src_file_logo;
         }
+    }
+
+    
+    
         DB::beginTransaction();
         DB::table('cars')->insert([
 
@@ -67,7 +73,7 @@ class DashboardController extends Controller
             'sittingtype' => $sittingtype,
             'Gearbox' => $Gerabox,
             'year' => $year,
-
+           
         ]);
         $id = DB::getPdo()->lastInsertId();
         DB::commit();
@@ -126,7 +132,6 @@ class DashboardController extends Controller
         $price = $request->input('price');
         $description = $request->input('description');
         $image = $request->file('image');
-        
         $sittingtype = $request->input('sittingtype');
         $Gerabox = $request->input('GearBox');
         $years = $request->input('years');

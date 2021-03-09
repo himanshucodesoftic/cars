@@ -31,6 +31,7 @@ public function new(Request $request)
     if (count($res_query)) {
         foreach ($res_query as $res) {
             $productlist[] = array(
+                'id'=>$res['id'],
                 'name' => $res['name'],
                 'model' => $res['model'],
                 'image' => $res['image'],
@@ -43,6 +44,7 @@ public function new(Request $request)
                 'year' => $res['year'],
 
 
+
             );
          
         }
@@ -50,6 +52,8 @@ public function new(Request $request)
         $productlist = array();
        
     }
+    
+// }
     return view('cars', compact(['productlist']));
 
 }
@@ -76,6 +80,7 @@ public function indexshow(Request $request)
 
                 'sittingtype' => $res['sittingtype'],
 
+                'featureimage' => $res['featureimage'],
                 // 'price' => $res[''],
 
                 
@@ -86,6 +91,9 @@ public function indexshow(Request $request)
         $productlist = array();
        
     }
+
+    
+    
     return view('index', compact(['productlist']));
 
 }
