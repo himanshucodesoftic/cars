@@ -56,7 +56,48 @@
     </svg>
   </a>
 </div>
-
+<form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
+        @csrf
+<dialog id="mymodaltop" class="bg-transparent z-0 relative w-screen h-screen">
+  <div class="fixed z-10 inset-0 overflow-y-auto">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+   
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+      </div>
+  
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+ 
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <div class="px-5 pt-6 pb-5 text-center border border-gray-300 rounded  items-center">
+          <div class="mb-5 font-bold"><h4 class="text-2xl">Book a Ride</h4></div>
+        
+          <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center">
+            <input type="text" placeholder="Name" name="name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" />
+            <input type="text" placeholder="Email"  name="email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" />
+          
+          <p class="max-w-md px-5 mb-3 text-xs text-gray-600 sm:text-sm md:mb-5">
+            
+          </p>
+       
+          <button href="" class="inline-flex items-center bg-yellow-500 justify-center  h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-green-500 focus:shadow-outline focus:outline-none">
+            Book Ride
+          </button>
+          </form>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <button type="button" onclick="modalClose('mymodaltop')"  class="w-full bg-red-500 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+            Cancel Booking
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</dialog>
+</form>
 
 
 

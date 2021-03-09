@@ -26,9 +26,9 @@
       </div>
       <div class="flex items-center space-x-3">
   
-          <a href="./BookRide.html" class=" w-32 transition duration-300 text-center cta bg-orange-500 hover:bg-red-600  hover:shadow-lg px-3 py-2 rounded text-white font-normal"> @lang('home.contactus')</a>
+          <a href="{{url('contactus')}}" class=" w-32 transition duration-300 text-center cta bg-orange-500 hover:bg-red-600  hover:shadow-lg px-3 py-2 rounded text-white font-normal"> @lang('home.contactus')</a>
         
-          <a href="./BookRide.html" class=" w-32 transition duration-300 text-center cta bg-orange-500 hover:bg-red-600  hover:shadow-lg px-3 py-2 rounded text-white font-normal">@lang('home.bookride')</a>
+          <a href="{{url('BookRide')}}" class=" w-32 transition duration-300 text-center cta bg-orange-500 hover:bg-red-600  hover:shadow-lg px-3 py-2 rounded text-white font-normal">@lang('home.bookride')</a>
       </div>
     </div>
     <div class="flex items-center justify-center lg:w-1/2">
