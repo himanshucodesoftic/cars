@@ -11,6 +11,8 @@ class HomeController extends Controller
         $res=new bookride();
         $res->name=$request->input('name');
         $res->email=$request->input('email');
+        $res->phone=$request->input('phone');
+        
         $res->save();
         return redirect('thankyou');
 

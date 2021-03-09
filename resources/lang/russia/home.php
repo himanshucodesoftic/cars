@@ -80,6 +80,7 @@ return[
 'name'=>'имя',
 'email'=>'электронное письмо',
 'bookride'=>'Забронировать поездку',
+'phone'=>'Телефон',
 //contact us page
 'FeelFreeto'=>'не стесняйтесь',
 'contactus'=>'Связаться с нами',

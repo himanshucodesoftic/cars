@@ -232,7 +232,7 @@ class DashboardController extends Controller
     {    if (!$request->session()->has('ssiapp_adm_id')) {
         return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
     } 
-      $sel_query = "SELECT * from bookrides ORDER BY id DESC";
+      $sel_query = "SELECT * from bookrides ORDER BY id DESC" ;
        $res_query = DBraw::select($sel_query);
        $res_query = json_decode(json_encode($res_query), true);
        if (count($res_query)) {
@@ -241,7 +241,7 @@ class DashboardController extends Controller
                    'id' => $res['id'],
                    'name' => $res['name'],
                    'email' => $res['email'],
-                   'image' => $res['image'],
+                   'phone' => $res['phone'],
                );
            }
        } else {

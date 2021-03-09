@@ -92,7 +92,7 @@ return[
 'contactus'=>'Contact us',
 'wewillreachyou.'=>'we will reach you.',
 'phoneat'=>'phone at',
-
+'phone'=>'Phone',
 //bookride page
 
 'brandnew'=>'brand new',

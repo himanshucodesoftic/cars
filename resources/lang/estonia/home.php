@@ -86,6 +86,7 @@ return[
 'name'=>'nimi',
 'email'=>'e-post',
 'bookride'=>'raamatusõit',
+'phone'=>'telefon',
 //contact us page
 'FeelFreeto'=>'julgelt',
 'contactus'=>'Võta meiega ühendust',

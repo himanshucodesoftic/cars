@@ -10,6 +10,7 @@
                     <th>id</th>
                     <th>name</th>
                     <th>Email</th>
+                    <th>phone</th>
                    
                 </tr>
             </thead>
@@ -19,6 +20,7 @@
                     <td>{{ $list['id'] }}</td>
                     <td>{{ $list['name'] }}</td>
                     <td>{{ $list['email'] }}</td>
+                    <td>{{ $list['phone'] }}</td>
                 
 
                     </tr>
@@ -28,6 +30,7 @@
                     <th>id</th>
                     <th>name</th>
                     <th>Email</th>
+                    <th>phone</th>
                 
                 </tr>
             </tfoot>
