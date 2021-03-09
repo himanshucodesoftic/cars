@@ -42,9 +42,9 @@
                               <svg class="fill-current h-4 w-4" xmlns="{{asset('http://www.w3.org/2000/svg')}}" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
                             </button>
                             <ul class="dropdown-menu absolute hidden text-white-700 pt-1 ">
-                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="/locale/en"><span class="m-3">🇮🇳</span>IN</a></li>
-                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/russia"><span class="m-3">🇷🇺</span> RU</a></li>
-                              <li class=""><a class="rounded-b bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/estonia"><span class="m-3">🇪🇪 </span> ES</a></li>
+                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="/locale/en"><span class="inline-flex"><img src="{{asset('assets/img/flag/united-states-of-america.png')}}" alt="" class="h-8"><span class="mx-4 my-2">EN</span></span></a></li>
+                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/russia"><span class="inline-flex"><img src="{{asset('assets/img/flag/russia.png')}}"  alt="" class="h-8"><span class="mx-4 my-2">RU</span></a></li>
+                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/estonia"><span class="inline-flex"><img src="{{asset('assets/img/flag/estonia.png')}}" alt="" class="h-8"><span class="mx-4 my-2">ES</span></a></li>
                             </ul>
                           </div>
                         </li>
@@ -89,7 +89,14 @@
             <li><a href="{{url('contactus')}}" class="my-4 inline-block hover:text-orange-500">Contact us</a></li>
             <li><a href="{{url('BookRide')}}" class="my-8 w-full text-center font-semibold cta inline-block bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">Get the App</a></li>
         </ul>
+<ul>
+<li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="/locale/en"><span class="inline-flex"><img src="{{asset('assets/img/flag/united-states-of-america.png')}}" alt="" class="h-8"><span class="mx-4 my-2">EN</span></span></a></li>
+                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/russia"><span class="inline-flex"><img src="{{asset('assets/img/flag/russia.png')}}"  alt="" class="h-8"><span class="mx-4 my-2">RU</span></a></li>
+                              <li class=""><a class="rounded-t bg-orange-200 hover:bg-orange-400 py-2 px-4 block whitespace-no-wrap" href="locale/estonia"><span class="inline-flex"><img src="{{asset('assets/img/flag/estonia.png')}}" alt="" class="h-8"><span class="mx-4 my-2">ES</span></a></li>
+                         
 
+
+</ul>
         <!-- follow us -->
         <!-- <div class="follow">
             <p class=" italic font-semibold">follow us:</p>

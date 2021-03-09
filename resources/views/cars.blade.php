@@ -94,15 +94,10 @@
 <!---modal pop up start -->]
 <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
         @csrf
-        <dialog id="mymodaltop" class="bg-transparent z-0 relative w-screen h-screen" open="">
+        <dialog id="mymodaltop" class="bg-transparent z-0 relative w-screen h-screen" onclick="openModal('mymodaltop')">
   <div class="fixed z-10 inset-0 overflow-y-auto opacity-100">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <!-- <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
-        <svg class="fill-current text-white" onclick="modalClose('mymodaltop')" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-        </svg>
-        <span class="text-sm">(Esc)</span>
-      </div> -->
+     
 
       <div class="fixed inset-0 transition-opacity" aria-hidden="true">
         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -119,8 +114,8 @@
         
           <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center">
 
-            <input type="text" placeholder="Name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
-            <input type="text" placeholder="Email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+            <input type="text" placeholder="Name" name="name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+            <input type="text" placeholder="Email" name="email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
           
           <p class="max-w-md px-5 mb-3 text-xs text-gray-600 sm:text-sm md:mb-5">
             
