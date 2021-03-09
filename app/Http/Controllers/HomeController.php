@@ -12,7 +12,7 @@ class HomeController extends Controller
         $res->name=$request->input('name');
         $res->email=$request->input('email');
         $res->save();
-        return redirect('cars');
+        return redirect('thankyou');
 
         Mail::to('humanshud950@gmail.com')->send(new SendMail($data));
         return back()->with('success', 'Thanks for contacting us!');

@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    <div class="px-5 pt-6 pb-5 text-center border border-gray-300 rounded lg:w-2/5 items-center">
+    <div class="px-5 pt-6 pb-5 bg-orange-500 text-center border border-gray-300  rounded lg:w-2/5 items-center">
       <div class="mb-5 font-bold"><h4 class="text-2xl"> @lang('home.BookaRide')</h4></div>
     
       <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
@@ -34,7 +34,7 @@
         
       </p>
    
-      <button href="/" class="inline-flex items-center bg-yellow-500 justify-center  h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-gray-100 focus:shadow-outline focus:outline-none">
+      <button href="/" class="inline-flex items-center bg-orange-500 justify-center  h-12 px-6 font-semibold transition duration-200 border border-gray-300 rounded md:w-auto hover:bg-orange-600 focus:shadow-outline focus:outline-none">
         Book Ride
       </button>
       </form>
@@ -94,45 +94,49 @@
 <!---modal pop up start -->]
 <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
         @csrf
-<dialog id="mymodaltop" class="bg-transparent z-0 relative w-screen h-screen">
-  <div class="fixed z-10 inset-0 overflow-y-auto">
+        <dialog id="mymodaltop" class="bg-transparent z-0 relative w-screen h-screen" open="">
+  <div class="fixed z-10 inset-0 overflow-y-auto opacity-100">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-   
+      <!-- <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        <svg class="fill-current text-white" onclick="modalClose('mymodaltop')" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+        </svg>
+        <span class="text-sm">(Esc)</span>
+      </div> -->
+
       <div class="fixed inset-0 transition-opacity" aria-hidden="true">
         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
       </div>
   
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
- 
+     
       <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <span class="absolute right-0 mr-4" onclick="modalClose('mymodaltop')">
+          <svg class="h-12 w-12 fill-current text-grey hover:text-grey-darkest" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"></path></svg>
+      </span>
         <div class="px-5 pt-6 pb-5 text-center border border-gray-300 rounded  items-center">
           <div class="mb-5 font-bold"><h4 class="text-2xl">Book a Ride</h4></div>
         
           <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center">
-            <input type="text" placeholder="Name" name="name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" />
-            <input type="text" placeholder="Email"  name="email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" />
+
+            <input type="text" placeholder="Name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+            <input type="text" placeholder="Email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
           
           <p class="max-w-md px-5 mb-3 text-xs text-gray-600 sm:text-sm md:mb-5">
             
           </p>
-       
-          <button href="" class="inline-flex items-center bg-yellow-500 justify-center  h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-green-500 focus:shadow-outline focus:outline-none">
-            Book Ride
+        
+          <button href="/" class="inline-flex items-center bg-yellow-500 justify-center  h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-green-500 focus:shadow-outline focus:outline-none">
+            Book Ride 
           </button>
           </form>
         </div>
-        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-          <button type="button" onclick="modalClose('mymodaltop')"  class="w-full bg-red-500 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
-            Cancel Booking
-          </button>
-          
-        </div>
+   
       </div>
     </div>
   </div>
-</div>
   
-</dialog>
+</dialog> 
 </form>
 
 
