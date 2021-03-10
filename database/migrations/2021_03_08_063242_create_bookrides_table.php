@@ -17,6 +17,12 @@ class CreateBookridesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('phone')->null();
+            $table->string('address')->null();
+            
+            $table->string('Duration')->null();
+            $table->string('CarName')->null();
+            
             $table->timestamps();
         });
     }
