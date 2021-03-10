@@ -20,7 +20,7 @@
       </div>
 
     </div>
-    <div class="px-5 pt-6 pb-5 text-center bg-orange-500 border border-gray-300 rounded-lg transform  hover:bg-orange-400 lg:w-2/5 items-center">
+    <div class="px-5 pt-6 pb-5 text-center bg-orange-500 border border-gray-300 rounded-lg transform  hover:bg-orange-400 lg:w-2/5 items-center" style="margin-top:60px;">
       <div class="mb-5 font-bold"><h4 class="text-2xl">@lang('home.BookaRide')</h4></div>
       <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
         @csrf
