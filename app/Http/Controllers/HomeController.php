@@ -12,7 +12,9 @@ class HomeController extends Controller
         $res->name=$request->input('name');
         $res->email=$request->input('email');
         $res->phone=$request->input('phone');
-        
+        $res->address=$request->input('address');
+        $res->Duration=$request->input('Duration');
+        $res->CarName=$request->input('CarName');
         $res->save();
         return redirect('thankyou');
 
@@ -54,6 +56,7 @@ public function new(Request $request)
         $productlist = array();
        
     }
+
     
 // }
     return view('cars', compact(['productlist']));
@@ -64,6 +67,7 @@ public function new(Request $request)
 
 public function indexshow(Request $request)
 { 
+    
     // dd($request);
     // dd($request);
     $sel_query = "SELECT * from cars";

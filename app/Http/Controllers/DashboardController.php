@@ -232,6 +232,9 @@ class DashboardController extends Controller
     {    if (!$request->session()->has('ssiapp_adm_id')) {
         return \redirect('/page-login')->withErrors(['error_reason'=>'Session Don\'t exist']);
     } 
+
+    // $sel_query ="   SELECT w.name AS bookrides, w.id AS bookrides, w.email AS bookrides, m.name AS cars
+    // FROM bookrides w, cars m;";
       $sel_query = "SELECT * from bookrides ORDER BY id DESC" ;
        $res_query = DBraw::select($sel_query);
        $res_query = json_decode(json_encode($res_query), true);
@@ -242,6 +245,9 @@ class DashboardController extends Controller
                    'name' => $res['name'],
                    'email' => $res['email'],
                    'phone' => $res['phone'],
+                   'address' => $res['address'],
+                   'Duration' => $res['Duration'],
+                   'CarName' => $res['CarName'],
                );
            }
        } else {

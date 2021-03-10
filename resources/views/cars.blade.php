@@ -84,114 +84,128 @@
 
 
 
-<div class="row">
-<div class="col-md-3">
-  <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-  @isset($productlist)
-  @foreach($productlist as $list)
-    <a href="/" aria-label="View Item">
-      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-         <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{asset($list['image'])}}" alt="" /> 
-  
-  
-        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-          <!-- <p class="text-sm font-medium tracking-wide text-white">
-            <b> price:{{ $list['price'] }}</b>
-          </p> -->
-          <table class="table" style="color:white">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" >1</th>
-      <td style="color:red;">{{ $list['price'] }}</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-   
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-        </div>
-      </div>
-    </a>
-    @endforeach
-  @endisset
-    </div>
-
-    </div>
-  </div>
 
 
 
-  <!-- header end-->
-  
  <!--- our cars -->
- <!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+
+ <<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
     <div>
       <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-        @lang('home.ourcars')
-        {{-- Our Cars --}}
+        Our Cars
       </p>
     </div>
     <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
       <span class="relative inline-block">
-     
+        <!-- <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+          <defs>
+            <pattern id="18302e52-9e2a-4c8e-9550-0cbb21b38e55" x="0" y="0" width=".135" height=".30">
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+        </svg> -->
         <span class="relative"></span>
-      </span>   
-      @lang('home.Chooseyourcarforrental')
-      {{-- Choose your car for rental --}}
+      </span>
+      Choose your car for rental
     </h2>
-  
-  </div> -->
-
-
-
-<!-- 
-
-  <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-  @foreach($productlist as $list)
-   
-      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-         <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{asset($list['image'])}}"  style="height:500px;" alt="" /> 
-        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-          <p class="text-sm font-medium tracking-wide text-white">
-        Name:{{ $list['name'] }}<br>
-        Model:{{ $list['model'] }}<br>
-        price:{{ $list['price'] }}<br>
-        Gearbox:{{ $list['Gearbox'] }}<br>
-        price:{{ $list['description'] }}<br>
-        Gearbox:{{ $list['year'] }}<br>
-          </p>
-      
-          <button class="bg-white px-3 shadow-lg mt-1 font-semibold  rounded py-1 hover:bg-orange-100" onclick="openModal('mymodaltop')">Book Car </button>  
-        </div>
-      </div>
-    
-    
-    @endforeach
   
   </div>
 
-</div> -->
-<!---modal pop up start -->
-<!-- @foreach($productlist as $list)
+  <div class="grid gap-6 row-gap-5 mb-8 space-x-2 space-y-2 lg:grid-cols-3 md:grid-cols-2 sm:row-gap-1 sm:grid-cols-1 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+   <!--car 1 card start--> 
+
+  @foreach($productlist as $list)
+   <div class="">
+    <div class="w-full px-2 max-w-md  max-w-sm">
+      <div class="swiper-container  h-64">
+<!-- Additional required wrapper -->
+<div class="swiper-wrapper" >
+  <!-- Slides -->
+  <div class="swiper-slide">
+    <img src="{{asset($list['image'])}}" class="max-w-sm max-w-md" >
+  </div>
+  <div class="swiper-slide">
+    <img src="{{asset($list['image'])}}" class="max-w-sm max-w-md">
+  </div>
+</div>
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+<!-- If we need pagination -->
+<div class="swiper-pagination"></div>   
+</div>
+
+<div class="bg-orange-200 p-2">
    
+  
+  <p class="text-lg text-center font-bold">DESECRIPTION</p>
+  <table class="rounded-t-lg  mx-auto bg-gray-800 text-gray-200">
+    <tr class="text-left border-b border-gray-300">
+      <th class="px-4 py-3">Name</th>
+      <th class="px-4 py-3">Model</th>
+      <th class="px-4 py-3">Description</th>
+      <th class="px-4 py-3">Gearbox</th>
+    </tr>
+    <tr class="bg-gray-700 border-b border-gray-600">
+      <td class="px-4 py-3">{{ $list['name'] }}  </td>
+      <td class="px-4 py-3">{{ $list['model'] }}</td>
+      <td class="px-4 py-3">{{ $list['description'] }}</td>
+      <td class="px-4 py-3">{{ $list['Gearbox'] }}</td>
+    </tr>    
+  <!-- each row -->
+  
+  <!-- each row -->
+    <!-- each row -->
+  </table>
+  
+  <!-- dark design -->
+  
+  <div class=" mb-5">
+   <center> 
+   <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">{{ $list['name'] }}</button> -->
+   <button class="bg-green-500 px-5 py-2 hover:bg-orange-500 rounded-lg mt-5" data-toggle="modal" data-target="#mymodaltop{{ $list['id'] }}" onclick="openModal('mymodaltop')"   data-toggle="modal" data-target="#modal-delete-{{ $list['id']}}" >Book Car</button></center>
+  </div>
+
+
+ 
+
+    </div>
+    </div>
+   </div>
+   <!--end car card--> 
+
+ 
+
+  @endforeach
+   <!--car 1 card start--> 
+   
+   <!--end car card--> 
+
+  
+      <!--car 1 card start--> 
+      
+       <!--end car card--> 
+    
+      
+
+   </div>
+  
+
+  
+  </div>
+
+</div>
+
+
+
+
+
 <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center" action="{{url('/submitbookride')}}" method="post">
         @csrf
-        <dialog id="mymodaltop"  id=""class="bg-transparent z-0 relative w-screen h-screen" onclick="openModal('mymodaltop')">
+<dialog id="mymodaltop"  class="modal fade bg-transparent z-0 relative w-screen h-screen" onclick="openModal('mymodaltop')">
   <div class="fixed z-10 inset-0 overflow-y-auto opacity-100">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
      
@@ -203,7 +217,7 @@
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
      
       <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-        <span class="absolute right-0 mr-4" onclick="modalClose('mymodaltop')">
+        <span class="absolute right-0 mr-4" onclick="modalClose('mymodaltop') ">
           <svg class="h-12 w-12 fill-current text-grey hover:text-grey-darkest" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"></path></svg>
       </span>
         <div class="px-5 pt-6 pb-5 text-center border border-gray-300 rounded  items-center">
@@ -211,12 +225,20 @@
         
           <form class="shadow-lg  p-4 flex flex-col bg-white rounded-lg items-center">
 
-            <input type="text" placeholder="Name" name="name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" value="{{ $list['name'] }}">
-            <input type="text" placeholder="Email" name="email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+            <input type="text" placeholder="Enter Your Name" name="name" class="mb-3 py-3 px-4 w-full border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500"   >
+            <input type="text" placeholder="Enter Your Email" name="email" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" >
+            <input type="text" placeholder="Enter Your phone" name="phone" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500" >
+            
+              <input type="text" placeholder="Enter Your Address" name="address" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+              <input type="text" placeholder="Enter Duration"  name="Duration" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+              <input type="text" placeholder="Confirm Car Name" name="CarName" class="mb-3 py-3 px-4 w-full  border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-cyan-500">
+            
           
           <p class="max-w-md px-5 mb-3 text-xs text-gray-600 sm:text-sm md:mb-5">
             
           </p>
+
+
         
           <button href="/" class="inline-flex items-center bg-yellow-500 justify-center  h-12 px-6 font-semibold transition duration-200 bg-white border border-gray-300 rounded md:w-auto hover:bg-green-500 focus:shadow-outline focus:outline-none">
             Book Ride 
@@ -230,10 +252,30 @@
   
 </dialog> 
 </form>
-@endforeach -->
-   
-
 <script>
+
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
   function toggleNavbar(collapseID) {
       document.getElementById(collapseID).classList.toggle("hidden");
       document.getElementById(collapseID).classList.toggle("block");
@@ -262,7 +304,7 @@ function openModal(key) {
     function modalClose(key) {
         document.getElementById(key).children[0].classList.remove('opacity-100');
         document.getElementById(key).children[0].classList.add('opacity-0');
-        setTimeout(function () {
+        setTimeo  ut(function () {
             document.getElementById(key).close();
             document.body.removeAttribute('style');
         }, 100);

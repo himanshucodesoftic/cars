@@ -11,7 +11,9 @@
                     <th>name</th>
                     <th>Email</th>
                     <th>phone</th>
-                   
+                    <th>address</th>
+                    <th>Duration</th>
+                    <th>CarName</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,17 +23,23 @@
                     <td>{{ $list['name'] }}</td>
                     <td>{{ $list['email'] }}</td>
                     <td>{{ $list['phone'] }}</td>
+                    <td>{{ $list['address'] }}</td>
+                    <td>{{ $list['Duration'] }}</td>
+                    <td>{{ $list['CarName'] }}</td>
                 
 
                     </tr>
                 @endforeach
             <tfoot>
                 <tr>
-                    <th>id</th>
+                <th>id</th>
                     <th>name</th>
                     <th>Email</th>
                     <th>phone</th>
-                
+                    <th>address</th>
+                    <th>Duration</th>
+                    <th>CarName</th>
+
                 </tr>
             </tfoot>
         </table>
