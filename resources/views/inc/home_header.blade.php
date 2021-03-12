@@ -31,7 +31,7 @@
                 <navbar class="navbar hidden md:block">
                     <ul class="flex space-x-8 text-sm font-semibold">
                         <li><a href="{{url('index')}}" class=" pb-2">@lang('home.Home')</a></li>
-                        <li><a href="{{url('cars')}}" class=" hover:text-orange-500">@lang('home.cars')</a></li>
+                        <!-- <li><a href="{{url('cars')}}" class=" hover:text-orange-500">@lang('home.cars')</a></li> -->
                         <li><a href="{{url('AboutUs')}}" class="hover:text-orange-500">@lang('home.aboutus')</a></li>
                         <li><a href="{{url('contactus')}}" class="hover:text-orange-500">@lang('home.contactus')</a></li>
                         <li><a href="{{url('BookRide')}}"  class="cta bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">@lang('home.Bookride')</a></li>
@@ -84,7 +84,7 @@
         </div>
          <ul class="divide-y">
             <li><a href="{{url('index')}}" class="my-4 inline-block active font-bold">Home</a></li>
-            <li><a href="{{url('cars')}}" class="my-4 inline-block hover:text-orange-500">Cars</a></li>
+            <!-- <li><a href="{{url('cars')}}" class="my-4 inline-block hover:text-orange-500">Cars</a></li> -->
             <li><a href="{{url('AboutUs')}}" class="my-4 inline-block hover:text-orange-500">About us</a></li>
             <li><a href="{{url('contactus')}}" class="my-4 inline-block hover:text-orange-500">Contact us</a></li>
             <li><a href="{{url('BookRide')}}" class="my-8 w-full text-center font-semibold cta inline-block bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded text-white font-normal">Get the App</a></li>

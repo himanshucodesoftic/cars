@@ -1,6 +1,10 @@
 @extends('layout.home_layout')
 @section('content')
-
+<style>
+html{
+  scroll-behavior: smooth;
+}
+</style>
 <!--- nav bar end-->
        
 
@@ -38,7 +42,7 @@
     </div>
   </div>
   <a
-    href=""
+    href="#rideSafe"
     aria-label="Scroll down"
     class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
   >
@@ -49,7 +53,7 @@
 </div>
   <!-- header end-->
 
-  <div class="flex flex-col bg-white m-auto p-auto">
+  <div class="flex flex-col bg-white m-auto p-auto" id="rideSafe">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <div>
         <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -352,67 +356,64 @@
 <!-- pricing end-->
 
 <!-- booking ride steps start-->
-
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" >
   <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
     <div>
       <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-        @lang('home.RENTALCARBOOKINGPROCESS')
-        {{-- Rental Car Booking Process --}}
+        Rental Car Booking Process
       </p>
     </div>
     <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
       <span class="relative inline-block">
 
-        <span class="relative">  @lang('home.the')</span>
+        <span class="relative">The</span>
       </span>
-      @lang('home.SimpleThreestepstoBookyourRentalCar.')
-      {{-- Simple Three steps to Book your Rental Car. --}}
+      Simple Three steps to Book your Rental Car.
     </h2>
    
   </div>
-  <div class="grid gap-10 lg:grid-cols-3 sm:grid-cols-2">
+  <div class="grid gap-10 lg:grid-cols-3 sm:grid-cols-2 bg-gray-50 rounded-lg p-10 shadow-lg hover:shadow-2xl">
   
     <div>
       <div class="flex items-center justify-between mb-6">
-        <p class="text-2xl font-bold">      @lang('home.Step1')</p>
+        <p class="text-2xl font-bold">Step 1</p>
         <svg class="w-6 text-gray-700 transform rotate-90 sm:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
           <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
           <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
         </svg>
       </div>
       <p class="text-gray-600">
-        @lang('home.SelectyourDesiredcarforrentalserviceandplacebookredautorideorder.')
-        {{-- Select your Desired car for rental service and place book red auto ride order.Step1      </p> --}}
-    </div>
-    <div>
-      <div class="flex items-center justify-between mb-6">
-        <p class="text-2xl font-bold"> @lang('home.Step2')</p>
-        <svg class="w-6 text-gray-700 transform rotate-90 sm:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-          <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
-        </svg>
-      </div>
-      <p class="text-gray-600">
-        @lang('home.Aftersuccesfullbooking,waitforconfromationstatusfromRedAuto.')
-        {{-- After succesfull booking , wait for confromation status from RedAuto . --}}
+        Select your Desired car for rental service and place book red auto ride order.
       </p>
     </div>
     <div>
       <div class="flex items-center justify-between mb-6">
-        <p class="text-2xl font-bold">        @lang('home.success')</p>
+        <p class="text-2xl font-bold">Step 2</p>
+        <svg class="w-6 text-gray-700 transform rotate-90 sm:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+          <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+        </svg>
+      </div>
+      <p class="text-gray-600">
+        After succesfull booking , wait for confromation status from RedAuto .
+      </p>
+    </div>
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-2xl font-bold">Success</p>
         <svg class="w-8 text-gray-600" stroke="currentColor" viewBox="0 0 24 24">
           <polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6,12 10,16 18,8"></polyline>
         </svg>
       </div>
       <p class="text-gray-600">
-        @lang('home.Afterconformation.NothingmoreEnjoyyourRide.')
-         {{-- After conformation . Nothing more Enjoy your Ride . --}}
+         After conformation . Nothing more Enjoy your Ride .
       </p>
     </div>
   </div>
 </div>
-
+</div>
 <!--end booking ride process -->
+
 @endsection
 

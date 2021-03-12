@@ -59,7 +59,7 @@ public function new(Request $request)
 
     
 // }
-    return view('cars', compact(['productlist']));
+    return view('BookRide', compact(['productlist']));
 
 }
 

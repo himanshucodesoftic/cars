@@ -14,6 +14,6 @@ class EmailController extends Controller
         
         $res->email=$request->input('email');
         $res->save();
-        return redirect('index');
+        return redirect('thankyou');
     }
 }

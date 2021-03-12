@@ -67,7 +67,7 @@ return redirect()->back();
 Route::post('emailsubmit',"App\Http\Controllers\EmailController@SubmitEmail");
 Route::post('submitbookride',"App\Http\Controllers\HomeController@Submitbookride");
 
-Route::get('cars',"App\Http\Controllers\HomeController@new");
+Route::get('BookRide',"App\Http\Controllers\HomeController@new");
 
 
 Route::get('index',"App\Http\Controllers\HomeController@indexshow");
